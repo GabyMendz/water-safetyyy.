@@ -1,0 +1,259 @@
+
+box-sizing: border-box; /* Ensure padding/margin are included in total width/height */
+}
+
+body {
+    font-family: 'Khmer', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F7FA; /* Light blue background */
+    background: #001724;
+background: linear-gradient(90deg, rgba(0, 23, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Header and main elements */
+header h1, h2, h3 {
+    animation: fadeIn 1s ease-in-out; /* Fade in for headers */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Flex container for the image and text */
+.flex-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Image styling */
+.half-width-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    animation: slideIn 0.5s ease forwards; /* Slide in animation */
+    div.polaroid {
+        width: 80%;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      
+      img {width: 100%}
+      
+      div.container {
+        text-align: center;
+        padding: 10px 20px;
+      }
+}
+
+/* Text container */
+.text-container {
+    flex: 1; /* Take up 50% of the width */
+    max-width: 50%; /* Ensure it does not exceed 50% */
+    padding-left: 20px; /* Space between image and text */
+}
+
+/* Tips grid layout */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.dropdown {
+    background-color: #EA8F14; 
+    border-radius: 8px; 
+    padding: 15px; 
+    animation: fadeIn 1s ease-in-out; /* Fade in for dropdowns */
+}
+
+/* Button hover effect */
+.dropdown-button {
+    background-color: #EA8F14;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-button:hover {
+    background-color: #79aedd; /* Change background on hover */
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none; /* Initially hidden */
+    padding: 10px;
+}
+
+.dropdown-button:focus + .dropdown-content,
+.dropdown-button:hover + .dropdown-content {
+    display: block; /* Show content on hover */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the edges */
+    background-color: #FBE9D0;
+    color: rgb(159, 203, 218);
+    padding: 20px;
+}
+
+header img {
+    width: 80px; /* Logo size */
+    height: auto;
+    margin-right: 20px; /* Space from the right */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    flex-grow: 1; /* Allow title to take up space */
+    text-align: center;
+    color: rgb(30, 143, 187);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #EA8F14;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #79aedd;
+}
+
+/* Additional styles for image and overlay text */
+.image-container {
+    position: relative; /* Position relative to contain absolutely positioned children */
+}
+
+.full-width-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any bottom space */
+}
+
+.overlay-text {
+    position: absolute; /* Position text over the image */
+    top: 20%; /* Adjust vertical position */
+    right: 5%; /* Adjust horizontal position */
+    color: white; /* Text color */
+    background-color: rgba(221, 105, 15, 0.511); /* Semi-transparent background for readability */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 300px; /* Limit width of the overlay */
+}
+
+.overlay-text h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Size for the heading */
+}
+
+.overlay-text p {
+    margin-top: 5px; /* Space between heading and paragraph */
+}
+
+/* Service section styles */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for services */
+    gap: 20px;
+}
+
+section {
+    background-color: #EA8F14;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Scale up the section slightly on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: add shadow for depth */
+}
+
+.service-image {
+    width: 100px; /* Service image size */
+    height: 100px; /* Ensure height matches width for circular shape */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    transition: opacity 1s; /* Set transition for opacity */
+}
+
+.service-title {
+    font-size: 1.5em; /* Enhanced title size */
+    margin: 0 0 5px 0; /* Spacing below title */
+}
+
+.service-caption {
+    max-width: 200px;
+}
+
+.service-caption p {
+    margin-top: 5px;
+}
+
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns for tips */
+gap: 20px; /* Space between grid items */
+padding: 20px 0; /* Padding above and below the grid */
+}
+
+.dropdown {
+background-color: #EA8F14; 
+border-radius: 8px; 
+padding: 15px; 
+animation: fadeIn 1s ease-in-out; /* Fade in for dropdowns */
+}
+
+
+
